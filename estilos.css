@@ -1,0 +1,335 @@
+
+/* GENERALES ------------------------------------------------------------------------------------------------------- */
+
+img{
+    width: 100%;
+}
+
+.body{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-color: black;
+}
+
+.header{
+    width: 100%;
+    display: flex;
+    background-color: black;
+}
+
+.nav{
+    width: 100%;
+    display: flex;
+    background-color: black;
+    justify-content: space-between  ;
+    align-items: center;
+}
+
+.nav--img{
+    width: 10rem;
+    height: auto;
+}
+
+.nav__elements--logo{
+    width: 70%;
+    display: inline-block
+}
+
+.nav__elements--panel{
+    display: flex;
+    width: auto;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    list-style-type: none;
+
+}
+
+.nav__elements__panel--MY-PROFILE{
+    padding: 1em;
+    display: inline-block;
+    text-decoration: none;
+    background-color: white;
+}
+
+.nav__elements__panel--LOGIN{
+    padding: 1em;
+    display: inline-block;
+    text-decoration: none;
+    background-color: white;
+}
+
+.main{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+}
+
+.main__section{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+}
+
+.logo{
+    padding: 0%;
+    border: double;
+    margin: 10px;
+    height: 40px;
+    width: 40px;
+}
+
+.footer{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2%;
+    margin: 0px;
+    border: 5px outset black;
+    text-align: center;
+    background-color: rgb(0, 0, 0);
+}
+
+.footer__items{
+    width: auto;
+    text-decoration: none;
+    margin: 1em;
+    padding: 1em;
+    border: 1px inset black;
+    text-align: inherit;
+    background-color: white;
+}
+
+.footer__items--logo{
+    width: 7rem;
+    height: auto;
+}
+
+/* INDEX CSS ------------------------------------------------------------------------------------------------------- */
+
+.main__section--grids{
+    display: grid;
+    background-color: antiquewhite;
+    border: 1rem solid black;
+    grid-template-columns: minmax(2, 25%);
+    grid-template-rows: minmax(auto, 300px);
+    grid-template-areas: 'NAV NAV' 'SECTION ASIDE';
+}
+
+.nav--grids{
+    grid-area: nav;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.nav--grids div{
+    background-color: lightslategray;
+    border: 0.3rem solid black;
+    padding: 1rem;
+    margin: 2rem 0%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: space-between;
+}
+
+.article--grids{
+    grid-area: features;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.article--grids div{
+    border: 0.3rem solid black;
+    padding: 1rem;
+    margin: 2rem 0%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: space-between;
+    background-color:lightslategray;
+
+}
+
+
+
+/* INDEX ------------------  VIEJO   ----------------------------------------------------------------------------------------- */
+
+/*  
+.main__section__article{
+    display: flex;
+    flex-wrap: wrap;
+    width: 60%;
+    background-color: rgb(255, 255, 255);
+    justify-content: center;
+    align-content: flex-start;
+}
+
+.main__section__article--navi{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    justify-content: center;
+    align-content: flex-start;
+}
+
+.image-article{
+    height: 15rem;
+    width: auto;
+}
+
+.image-aside{
+    height: 5rem;
+    width: auto;
+}
+
+.main__section__article--noticia{
+    width: 50%;
+    height: 10%;
+}
+
+.main__section__aside{
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    justify-content: center;
+    align-content: flex-start;
+}
+
+.main__section__aside__div{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+    align-content: flex-start;
+}
+*/
+
+/* LOGIN CSS ------------------------------------------------------------------------------------------------------- */
+
+.main__section__login{
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.main__section__login--login{
+    border-right: 2px solid black;
+    background-color: aquamarine;
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    justify-content: center;
+    align-items: center;
+}
+
+.main__section__login--loginredes{
+    display: flex;
+    flex-direction: row;
+}
+
+.main__section__login--register{
+    margin: auto;
+    display: flex;
+    width: 20%;
+    align-items: center;
+}
+
+/* MY PROFILE CSS ------------------------------------------------------------------------------------------------------- */
+
+.main__section--gridsprofile{
+    display: grid;
+    background-color: antiquewhite;
+    grid-template-columns:  auto auto auto auto;
+    grid-auto-rows: minmax(100px, auto);
+}
+
+.main__section--gridsprofile div{
+    background-color: rgb(25, 73, 57);
+    text-align: center;
+    color: black;
+    border: 1px solid black;
+}
+
+.item0{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    grid-column: 1 / 5;
+    grid-row: 1 / 2;
+}
+
+.item1{
+    grid-column: 1 / 4;
+    grid-row: 2 / 5 ;
+}
+
+.item16{
+    grid-column: 4 / 5;
+    grid-row: 2 / 5;
+}
+
+/* 
+.item16bis{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+ */
+
+/* SUBSCRIPTION ------------------------------------------------------------------------------------------------------- */
+
+.main__section--gridssub{
+    display: grid;
+    background-color: antiquewhite;
+    grid-template-columns:minmax(3, 25%);
+    grid-template-rows: minmax(2, 300px);
+    grid-template-areas: 'plan plan plan' 'features features features';
+}
+
+.PLANES{
+    grid-area: plan;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.PLANES div{
+    background-color: lightslategray;
+    border: 0.3rem solid black;
+    padding: 1rem;
+    margin: 2rem 0%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: space-between;
+}
+
+.FEATURES{
+    grid-area: features;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.FEATURES div{
+    border: 0.3rem solid black;
+    padding: 1rem;
+    margin: 2rem 0%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: space-between;
+    background-color:lightslategray;
+
+}
