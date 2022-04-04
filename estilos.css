@@ -20,7 +20,7 @@ img{
     width: 100%;
     display: flex;
     background-color: black;
-    justify-content: space-between  ;
+    justify-content: space-between;
     align-items: center;
 }
 
@@ -31,7 +31,7 @@ img{
 
 .nav__elements--logo{
     width: 70%;
-    display: inline-block
+    display: inline-block;
 }
 
 .nav__elements--panel{
@@ -41,35 +41,20 @@ img{
     justify-content: space-between;
     align-items: center;
     list-style-type: none;
-
 }
 
-.nav__elements__panel--MY-PROFILE{
+.nav__elements__panel{
+    min-width: max-content;
     padding: 1em;
     display: inline-block;
     text-decoration: none;
-    background-color: white;
+    color: white;
 }
 
-.nav__elements__panel--LOGIN{
-    padding: 1em;
-    display: inline-block;
+.nav__elements__panel:hover{
     text-decoration: none;
-    background-color: white;
-}
-
-.main{
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    background-color: rgb(255, 255, 255);
-}
-
-.main__section{
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    background-color: rgb(255, 255, 255);
+    color: white;
+    background-color: #4B4A54;
 }
 
 .logo{
@@ -85,9 +70,8 @@ img{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 2%;
+    padding: auto;
     margin: 0px;
-    border: 5px outset black;
     text-align: center;
     background-color: rgb(0, 0, 0);
 }
@@ -96,56 +80,56 @@ img{
     width: auto;
     text-decoration: none;
     margin: 1em;
-    padding: 1em;
-    border: 1px inset black;
     text-align: inherit;
-    background-color: white;
+    color: white;
 }
 
 .footer__items--logo{
-    width: 7rem;
+    margin-left: 2em;
+    width: 7em;
     height: auto;
 }
 
 /* INDEX CSS ------------------------------------------------------------------------------------------------------- */
 
-.main__section--grids{
+.main{
     display: grid;
-    background-color: antiquewhite;
-    border: 1rem solid black;
-    grid-template-columns: minmax(2, 25%);
-    grid-template-rows: minmax(auto, 300px);
+    grid-template-columns: 70% 30%;
+    grid-template-rows: repeat(1, 0.5fr 2fr);
     grid-template-areas: 'NAV NAV' 'SECTION ASIDE';
+    background-color: rgb(255, 255, 255);
+    grid-gap: 2px;
 }
 
-.nav--grids{
-    grid-area: nav;
+.main__nav--top{
+    grid-area: NAV;
+    border: 1em solid black;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-evenly;
 }
 
-.nav--grids div{
+.main__nav--top div{
     background-color: lightslategray;
     border: 0.3rem solid black;
     padding: 1rem;
-    margin: 2rem 0%;
+    margin: 2rem;
     display: flex;
     flex-direction: column;
     text-align: center;
     justify-content: space-between;
 }
 
-.article--grids{
-    grid-area: features;
+.main__article--left{
+    grid-area: SECTION;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
     justify-content: space-between;
 }
 
-.article--grids div{
+.main__article--left div{
     border: 0.3rem solid black;
     padding: 1rem;
     margin: 2rem 0%;
@@ -154,63 +138,26 @@ img{
     text-align: center;
     justify-content: space-between;
     background-color:lightslategray;
-
 }
 
-
-
-/* INDEX ------------------  VIEJO   ----------------------------------------------------------------------------------------- */
-
-/*  
-.main__section__article{
-    display: flex;
-    flex-wrap: wrap;
-    width: 60%;
-    background-color: rgb(255, 255, 255);
-    justify-content: center;
-    align-content: flex-start;
-}
-
-.main__section__article--navi{
-    display: flex;
-    flex-wrap: wrap;
-    width: 100%;
-    background-color: rgb(255, 255, 255);
-    justify-content: center;
-    align-content: flex-start;
-}
-
-.image-article{
-    height: 15rem;
-    width: auto;
-}
-
-.image-aside{
-    height: 5rem;
-    width: auto;
-}
-
-.main__section__article--noticia{
-    width: 50%;
-    height: 10%;
-}
-
-.main__section__aside{
+.main__article--right{
+    grid-area: ASIDE;
     display: flex;
     flex-direction: column;
-    width: 40%;
-    justify-content: center;
-    align-content: flex-start;
+    align-items: center;
+    justify-content: space-between;
 }
 
-.main__section__aside__div{
+.main__article--right div{
+    border: 0.3rem solid black;
+    padding: 1rem;
+    margin: 2rem 0%;
     display: flex;
-    flex-direction: row;
-    width: 100%;
-    justify-content: center;
-    align-content: flex-start;
+    flex-direction: column;
+    text-align: center;
+    justify-content: space-between;
+    background-color:lightslategray;
 }
-*/
 
 /* LOGIN CSS ------------------------------------------------------------------------------------------------------- */
 
