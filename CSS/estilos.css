@@ -1,19 +1,36 @@
 
 /* GENERALES ------------------------------------------------------------------------------------------------------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+    height: 100%;
+    width: 100%;
+}
 
 img{
     width: 100%;
 }
 
 .body{
+    display: flex;
+    flex-direction: column;
     font-family: Georgia, 'Times New Roman', Times, serif;
     background-color: black;
+    min-height: 100vh;
+    width: 100%;
 }
 
 .header{
     width: 100%;
     display: flex;
     background-color: black;
+    position: fixed;
+    top: 0;
 }
 
 .nav{
@@ -30,11 +47,14 @@ img{
 }
 
 .nav__elements--logo{
-    width: 70%;
+    margin-left: 1em;
+    min-width: fit-content;
     display: inline-block;
 }
 
 .nav__elements--panel{
+    width: 100%;
+    margin: 0%;
     display: flex;
     width: auto;
     flex-direction: row;
@@ -66,6 +86,8 @@ img{
 }
 
 .footer{
+    position: fixed;
+    bottom: 0;
     width: 100%;
     display: flex;
     align-items: center;
@@ -93,6 +115,7 @@ img{
 /* INDEX CSS ------------------------------------------------------------------------------------------------------- */
 
 .main{
+    min-height: 100vh;
     display: grid;
     grid-template-columns: 70% 30%;
     grid-template-rows: repeat(1, 0.5fr 2fr);
@@ -161,28 +184,37 @@ img{
 
 /* LOGIN CSS ------------------------------------------------------------------------------------------------------- */
 
-.main__section__login{
+.main--login{
+    min-height: 100vh;
+}
+
+.main__sectionlog{
+    min-height: 100vh;
     width: 100%;
     display: flex;
+    flex-direction: row;
     align-items: center;
 }
 
-.main__section__login--login{
-    border-right: 2px solid black;
-    background-color: aquamarine;
+.main__sectionlog__loginContainer{
+    width: 70%;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+}
+
+.main__sectionlog--login{
+    background-color: white;
     display: flex;
     flex-direction: column;
-    width: 70%;
+    width: 40%;
     justify-content: center;
     align-items: center;
+    min-height: 100vh;
 }
 
-.main__section__login--loginredes{
-    display: flex;
-    flex-direction: row;
-}
-
-.main__section__login--register{
+.main__sectionlog--register{
+    color: white;
     margin: auto;
     display: flex;
     width: 20%;
@@ -190,6 +222,15 @@ img{
 }
 
 /* MY PROFILE CSS ------------------------------------------------------------------------------------------------------- */
+
+.main--myprofile{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: stretch;
+    background-color: white;
+}
 
 .main__section--gridsprofile{
     display: grid;
@@ -233,6 +274,15 @@ img{
  */
 
 /* SUBSCRIPTION ------------------------------------------------------------------------------------------------------- */
+
+.main--subscription{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: stretch;
+    background-color: white;
+}
 
 .main__section--gridssub{
     display: grid;
@@ -279,4 +329,23 @@ img{
     justify-content: space-between;
     background-color:lightslategray;
 
+}
+
+/* ------------------------------------------------   CONTACT US ----------------------------------------------------- */
+
+.main__form{
+    height: 100vh;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 45em;
+}
+
+.bootstrap__form{
+    border: double 2px black;
+    padding: 2em 2em;
+    margin: 3em;
+    width: 50%;
 }

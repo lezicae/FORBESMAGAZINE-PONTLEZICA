@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="estilos.css">
+    <link rel="stylesheet" href="CSS/estilos.css">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FORBES HOMEPAGE</title>
+    <title>FORBES LOGIN</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
 </head>
 <body class="body">
     <header class="header">
@@ -17,42 +19,43 @@
                 <li><a href="index.html" class="nav__elements__panel">HOMEPAGE</a></li>
                 <li><a href="MY-PROFILE.html" class="nav__elements__panel">MY PROFILE</a></li>
                 <li><a href="SUBSCRIPTION.html" class="nav__elements__panel">SUBSCRIPTION</a></li>
-                <li><a href="usa.html" class="nav__elements__panel">CONTACT US</a></li>
+                <li><a href="CONTACT-US.html" class="nav__elements__panel">CONTACT US</a></li>
                 <li><a href="LOGIN.html" class="nav__elements__panel">LOG IN</a></li>
             </ul>
         </nav>
     </header>
-    <main>
-        <Section class="main__section">
-            <article class="main__section__login">
-                <form class="main__section__login--login" action="GET">
-                    <h2 style="text-align: center;">BIENVENIDO, INGRESE EMAIL Y CONTRASEÑA</h2>
-                    <label for="USERNAME">EMAIL</label> <br>
-                    <input type="text"> <br>
-                    <label for="PASSWORD">CONTRASEÑA</label> <br>
-                    <input type="text"><br> 
-                    <button>LOG IN</button> <br>
-                    <label for="RECORDAR">RECUERDAME <input type="checkbox"></label>
-                    <div class="main__section__login--loginredes">
+    <main class="main--login">
+        <Section class="main__sectionlog">
+            <article class="main__sectionlog__loginContainer">
+                <form class="main__sectionlog--login" action="GET">
+                    <div class="form-group">
+                        <h2 style="text-align: center;">BIENVENIDO, INGRESE CORREO ELECTRÓNICO Y CONTRASEÑA</h2>
+                        <div class="form-group">
+                            <input type="email" class="form-control" id="Email" placeholder="Correo electrónico">
+                        </div>
+                        <div class="form-group">
+                            <input type="password" class="form-control" id="Contraseña" placeholder="Contraseña">
+                        </div>
+                        <button type="button" class="btn btn-primary">Ingresar</button>
+                        <label for="RECORDAR"><input type="checkbox"> Recordarme</label>
+                    </div>
+                    <small>O bien, ingrese con:</small>
+                    <div class="form-group">
                         <a href="https://www.twitter.com"><img class="logo" src="Images/twitter-logo.png" alt=""></a>
                         <a href="https://www.facebook.com"><img class="logo" src="Images/facebook-logo.png" alt=""></a>
                         <a href="https://www.instagram.com"><img class="logo" src="Images/instragram-logo.png" alt=""></a>
                         <a href="https://www.google.com"><img class="logo" src="Images/google-logo.png" alt=""></a>
                     </div>
                 </form>
-                <aside class="main__section__login--register">
-                    <form action="GET">
-                        <h2>O BIEN, REGÍSTRATE</h2>
-                        <p>Registrate para obtener las ultimas novedades, <br> selecciona tus preferencias y encuentra noticias de tus temas preferidos, <br>además te puedes suscribir a nuestro newsletter para enterarte de las ultimas novedades. <br></p>
-                        <button>REGÍSTRATE</button>
-                    </form>
-                </aside>
             </article>
-
+            <article class="main__sectionlog--register">
+                <form action="GET">
+                    <h2>O BIEN, REGÍSTRATE</h2>
+                    <p>Registrate para obtener las ultimas novedades, <br> selecciona tus preferencias y encuentra noticias de tus temas preferidos, <br>además te puedes suscribir a nuestro newsletter para enterarte de las ultimas novedades. <br></p>
+                    <button type="button" class="btn btn-secondary">REGÍSTRATE</button>
+                </form>
+            </article>
         </Section>
-        <aside>
-
-        </aside>
     </main>
     <footer class="footer">
         <img title="LogoMain" class="footer__items--logo" src="Images/forbes-logo.png">
