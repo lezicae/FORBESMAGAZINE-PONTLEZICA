@@ -1,0 +1,12 @@
+@import './Misc/variables';
+@import './Misc/normalize';
+@import './Misc/mixins';
+
+@import './Partials/header';
+@import './Partials/footer';
+
+@import './Views/index';
+@import './Views/LOGIN';
+@import './Views/CONTACT-US';
+@import './Views/MY-PROFILE';
+@import './Views/SUBSCRIPTION';

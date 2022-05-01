@@ -20,7 +20,7 @@ img{
     display: flex;
     flex-direction: column;
     font-family: Georgia, 'Times New Roman', Times, serif;
-    background-color: black;
+    background-color: rgb(255, 255, 255);
     min-height: 100vh;
     width: 100%;
 }
@@ -93,7 +93,6 @@ img{
     align-items: center;
     justify-content: space-between;
     padding: auto;
-    margin: 0px;
     text-align: center;
     background-color: rgb(0, 0, 0);
 }
@@ -114,72 +113,64 @@ img{
 
 /* INDEX CSS ------------------------------------------------------------------------------------------------------- */
 
-.main{
-    min-height: 100vh;
-    display: grid;
-    grid-template-columns: 70% 30%;
-    grid-template-rows: repeat(1, 0.5fr 2fr);
-    grid-template-areas: 'NAV NAV' 'SECTION ASIDE';
-    background-color: rgb(255, 255, 255);
-    grid-gap: 2px;
+/* ESTILOS BASIC & NAV -----------------------------------*/
+.main__section2{
+    flex-direction: row-reverse;
+    margin-bottom: 4em;
 }
 
-.main__nav--top{
-    grid-area: NAV;
-    border: 1em solid black;
+.main__index__nav{
+    padding-top: 5em;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-evenly;
+    width: 100%;
 }
 
-.main__nav--top div{
+.main__index__nav div{
     background-color: lightslategray;
-    border: 0.3rem solid black;
-    padding: 1rem;
-    margin: 2rem;
+    padding: 1em;
     display: flex;
     flex-direction: column;
     text-align: center;
     justify-content: space-between;
 }
 
-.main__article--left{
-    grid-area: SECTION;
+/* ESTILOS NOTICIAS ---------------------------------------*/
+.main__article__primary{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
-    justify-content: space-between;
+    height: 100%;
+    width: 100%;
 }
 
-.main__article--left div{
-    border: 0.3rem solid black;
-    padding: 1rem;
-    margin: 2rem 0%;
+.main__article__primary--image {
+    width: 10em;
+    height: 10em;
+}
+
+.main__article__primary--content{
     display: flex;
     flex-direction: column;
-    text-align: center;
-    justify-content: space-between;
+}
+
+.main__article__primary div{
+    margin: 5em 0;
     background-color:lightslategray;
 }
 
-.main__article--right{
-    grid-area: ASIDE;
+.main__article__secondary{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
-    justify-content: space-between;
+    height: 33%;
 }
 
-.main__article--right div{
-    border: 0.3rem solid black;
-    padding: 1rem;
-    margin: 2rem 0%;
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    justify-content: space-between;
+.main__article__secondary div{
     background-color:lightslategray;
+    height: 100%;
 }
 
 /* LOGIN CSS ------------------------------------------------------------------------------------------------------- */
@@ -196,8 +187,27 @@ img{
     align-items: center;
 }
 
+.main__sectionlog__registerContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: black;
+    width: 40%;
+}
+
+.main__sectionlog--register{
+    color: white;
+    width: 80%;
+}
+
+.main__sectionlog--register p{
+    padding: 2em;
+}
+
 .main__sectionlog__loginContainer{
-    width: 70%;
+    width: 60%;
     background-color: white;
     display: flex;
     justify-content: center;
@@ -213,14 +223,6 @@ img{
     min-height: 100vh;
 }
 
-.main__sectionlog--register{
-    color: white;
-    margin: auto;
-    display: flex;
-    width: 20%;
-    align-items: center;
-}
-
 /* MY PROFILE CSS ------------------------------------------------------------------------------------------------------- */
 
 .main--myprofile{
@@ -230,66 +232,91 @@ img{
     justify-content: center;
     align-items: stretch;
     background-color: white;
+    margin-top: 3em;
+}
+.main--myprofile h3{
+    padding: 1em;
 }
 
 .main__section--gridsprofile{
     display: grid;
-    background-color: antiquewhite;
+    background-color: white;
     grid-template-columns:  auto auto auto auto;
     grid-auto-rows: minmax(100px, auto);
 }
 
-.main__section--gridsprofile div{
-    background-color: rgb(25, 73, 57);
-    text-align: center;
-    color: black;
-    border: 1px solid black;
-}
-
-.item0{
+.MYPROFILEGRIDS--SUMMARY{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
     grid-column: 1 / 5;
     grid-row: 1 / 2;
+    border-bottom: 1px solid black;
 }
-
-.item1{
-    grid-column: 1 / 4;
-    grid-row: 2 / 5 ;
-}
-
-.item16{
-    grid-column: 4 / 5;
-    grid-row: 2 / 5;
-}
-
-/* 
-.item16bis{
+.MYPROFILEGRIDS--SUMMARY div{
     display: flex;
     flex-direction: column;
-    flex: 1;
 }
- */
+
+.MYPROFILEGRIDS--BASICINFO{
+    grid-column: 1 / 4;
+    grid-row: 2 / 5 ;
+    background-color: #919191;
+}
+.MYPROFILEGRIDS--BASICINFO form{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    padding: 0 0 0 1em;
+}
+
+input, textarea, label, button {
+    width : 12em;
+    padding: 1em 0;
+}
+
+.MYPROFILEGRIDS--NAV{
+    grid-column: 4 / 5;
+    grid-row: 2 / 5;
+    border-left: 1px solid black;
+}
+.MYPROFILEGRIDS--NAV div{
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.808);
+}
+.MYPROFILEGRIDS--NAV div a{
+    width: 100%;
+    display: inline-block;
+    background-color: rgba(0, 0, 0, 0.387);
+    text-decoration: none;
+    color: white;
+    padding: 1em 0;
+    border-left: 0.5em solid black;
+}
 
 /* SUBSCRIPTION ------------------------------------------------------------------------------------------------------- */
 
 .main--subscription{
+    margin: 4em 0 0 0;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
     justify-content: center;
-    align-items: stretch;
-    background-color: white;
+    align-items: center;
+    background-color: rgb(255, 255, 255);
 }
 
 .main__section--gridssub{
     display: grid;
-    background-color: antiquewhite;
-    grid-template-columns:minmax(3, 25%);
-    grid-template-rows: minmax(2, 300px);
+    background-color: black;
     grid-template-areas: 'plan plan plan' 'features features features';
+    min-height: 100vh;
+    width: 100%;
 }
 
 .PLANES{
@@ -298,11 +325,12 @@ img{
     flex-direction: row;
     align-items: center;
     justify-content: space-evenly;
+    margin: 0 10em;
 }
 
 .PLANES div{
     background-color: lightslategray;
-    border: 0.3rem solid black;
+    border: 0.3rem solid rgb(255, 255, 255);
     padding: 1rem;
     margin: 2rem 0%;
     display: flex;
@@ -317,10 +345,11 @@ img{
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+    margin: 0 10em;
 }
 
 .FEATURES div{
-    border: 0.3rem solid black;
+    border: 0.3rem solid rgb(255, 255, 255);
     padding: 1rem;
     margin: 2rem 0%;
     display: flex;
@@ -331,7 +360,7 @@ img{
 
 }
 
-/* ------------------------------------------------   CONTACT US ----------------------------------------------------- */
+/* -----------------------------------------------------------------------------------------------------  CONTACT US  ---------------------------------------------------------------------------------------------------------- */
 
 .main__form{
     height: 100vh;
@@ -348,4 +377,72 @@ img{
     padding: 2em 2em;
     margin: 3em;
     width: 50%;
+}
+
+/* --------------------------------------------------------------------------------------------------  MEDIA QUERIES  ----------------------------------------------------------------------------------------------------------- */
+
+@media screen and (max-width: 1280px){
+
+/* -------------------- HTML */
+    .footer__items{
+    font-size: x-small;
+    }
+    
+    .nav {
+        flex-direction: column;
+        justify-content: center;
+        font-size: x-small;
+    }
+
+/* -------------------- INDEX */
+    .main__index__nav{
+        font-size: small;
+    }
+
+    .main__index__nav div{
+        font-size: small;
+    }
+
+    .nav--img{
+        width: 10em;
+    }
+
+/* -------------------- LOGIN */
+    .main__sectionlog{
+        flex-direction: column;
+    }
+    .main__sectionlog__loginContainer{
+        width: 100%;
+    }
+    .main__sectionlog__registerContainer{
+        width: 100%;
+    }
+
+/* -------------------- CONTACT US */
+    .main__form{
+        margin: 60% 0;
+    }
+    .bootstrap__form{
+        width: 100%;
+    }
+
+/* -------------------- SUBSCRIPTIONS */
+    .PLANES{
+        flex-direction: column;
+    }
+    .FEATURES{
+        flex-direction: column;
+    }
+    .main__section--gridssub{
+        margin-bottom: 2em;
+    }
+    
+/* -------------------- MY PROFILE */
+    .main__section--gridsprofile{
+        min-height: 100vh;
+    }
+
+    .main--myprofile{
+        margin: 4em 0 0 0;
+    }
 }

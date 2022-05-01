@@ -1,0 +1,374 @@
+/* GENERALES ------------------------------------------------------------------------------------------------------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+html {
+  scroll-behavior: smooth;
+  height: 100%;
+  width: 100%; }
+
+img {
+  width: 100%; }
+
+.body {
+  display: flex;
+  flex-direction: column;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  background-color: white;
+  min-height: 100vh;
+  width: 100%; }
+
+.header {
+  width: 100%;
+  display: flex;
+  background-color: black;
+  position: fixed;
+  top: 0; }
+
+.nav {
+  width: 100%;
+  display: flex;
+  background-color: black;
+  justify-content: space-between;
+  align-items: center; }
+
+.nav--img {
+  width: 10rem;
+  height: auto; }
+
+.nav__elements--logo {
+  margin-left: 1em;
+  min-width: fit-content;
+  display: inline-block; }
+
+.nav__elements--panel {
+  width: 100%;
+  margin: 0%;
+  display: flex;
+  width: auto;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  list-style-type: none; }
+
+.nav__elements__panel {
+  min-width: max-content;
+  padding: 1em;
+  display: inline-block;
+  text-decoration: none;
+  color: white; }
+
+.nav__elements__panel:hover {
+  text-decoration: none;
+  color: white;
+  background-color: #4B4A54; }
+
+.logo {
+  padding: 0%;
+  border: double;
+  margin: 10px;
+  height: 40px;
+  width: 40px; }
+
+@media screen and (max-width: 1280px) {
+  .nav {
+    flex-direction: column;
+    justify-content: center;
+    font-size: x-small; } }
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: auto;
+  text-align: center;
+  background-color: black; }
+
+.footer__items {
+  width: auto;
+  text-decoration: none;
+  margin: 1em;
+  text-align: inherit;
+  color: white; }
+
+.footer__items--logo {
+  margin-left: 2em;
+  width: 7em;
+  height: auto; }
+
+@media screen and (max-width: 1280px) {
+  .footer__items {
+    font-size: x-small; } }
+
+/* INDEX CSS ------------------------------------------------------------------------------------------------------- */
+/* ESTILOS BASIC & NAV -----------------------------------*/
+.main__section2 {
+  flex-direction: row-reverse;
+  margin-bottom: 4em; }
+
+.main__index__nav {
+  padding-top: 5em;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%; }
+
+.main__index__nav div {
+  background-color: lightslategray;
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: space-between; }
+
+/* ESTILOS NOTICIAS ---------------------------------------*/
+.main__article__primary {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 100%;
+  width: 100%; }
+
+.main__article__primary--image {
+  width: 10em;
+  height: 10em; }
+
+.main__article__primary--content {
+  display: flex;
+  flex-direction: column; }
+
+.main__article__primary div {
+  margin: 5em 0;
+  background-color: lightslategray; }
+
+.main__article__secondary {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 33%; }
+
+.main__article__secondary div {
+  background-color: lightslategray;
+  height: 100%; }
+
+@media screen and (max-width: 1280px) {
+  .main__index__nav {
+    font-size: small; }
+  .main__index__nav div {
+    font-size: small; }
+  .nav--img {
+    width: 10em; } }
+
+/* LOGIN CSS ------------------------------------------------------------------------------------------------------- */
+.main--login {
+  min-height: 100vh; }
+
+.main__sectionlog {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center; }
+
+.main__sectionlog__registerContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: black;
+  width: 40%; }
+
+.main__sectionlog--register {
+  color: white;
+  width: 80%; }
+
+.main__sectionlog--register p {
+  padding: 2em; }
+
+.main__sectionlog__loginContainer {
+  width: 60%;
+  background-color: white;
+  display: flex;
+  justify-content: center; }
+
+.main__sectionlog--login {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; }
+
+@media screen and (max-width: 1280px) {
+  .main__sectionlog {
+    flex-direction: column; }
+  .main__sectionlog__loginContainer {
+    width: 100%; }
+  .main__sectionlog__registerContainer {
+    width: 100%; } }
+
+/* CONTACT US  ---------------------------------------------------------------------------------------------------------- */
+.main__form {
+  height: 100vh;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 45em; }
+
+.bootstrap__form {
+  border: double 2px black;
+  padding: 2em 2em;
+  margin: 3em;
+  width: 50%; }
+
+@media screen and (max-width: 1280px) {
+  .main__form {
+    margin: 60% 0; }
+  .bootstrap__form {
+    width: 100%; } }
+
+/* MY PROFILE CSS ------------------------------------------------------------------------------------------------------- */
+.main--myprofile {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  justify-content: center;
+  align-items: stretch;
+  background-color: white;
+  margin-top: 3em; }
+
+.main--myprofile h3 {
+  padding: 1em; }
+
+.main__section--gridsprofile {
+  display: grid;
+  background-color: white;
+  grid-template-columns: auto auto auto auto;
+  grid-auto-rows: minmax(100px, auto); }
+
+.MYPROFILEGRIDS--SUMMARY {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  grid-column: 1 / 5;
+  grid-row: 1 / 2;
+  border-bottom: 1px solid black; }
+
+.MYPROFILEGRIDS--SUMMARY div {
+  display: flex;
+  flex-direction: column; }
+
+.MYPROFILEGRIDS--BASICINFO {
+  grid-column: 1 / 4;
+  grid-row: 2 / 5;
+  background-color: #919191; }
+
+.MYPROFILEGRIDS--BASICINFO form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  padding: 0 0 0 1em; }
+
+input, textarea, label, button {
+  width: 12em;
+  padding: 1em 0; }
+
+.MYPROFILEGRIDS--NAV {
+  grid-column: 4 / 5;
+  grid-row: 2 / 5;
+  border-left: 1px solid black; }
+
+.MYPROFILEGRIDS--NAV div {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(0, 0, 0, 0.808); }
+
+.MYPROFILEGRIDS--NAV div a {
+  width: 100%;
+  display: inline-block;
+  background-color: rgba(0, 0, 0, 0.387);
+  text-decoration: none;
+  color: white;
+  padding: 1em 0;
+  border-left: 0.5em solid black; }
+
+@media screen and (max-width: 1280px) {
+  .main__section--gridsprofile {
+    min-height: 100vh; }
+  .main--myprofile {
+    margin: 4em 0 0 0; } }
+
+/* SUBSCRIPTION ------------------------------------------------------------------------------------------------------- */
+.main--subscription {
+  margin: 4em 0 0 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  justify-content: center;
+  align-items: center;
+  background-color: white; }
+
+.main__section--gridssub {
+  display: grid;
+  background-color: black;
+  grid-template-areas: 'plan plan plan' 'features features features';
+  min-height: 100vh;
+  width: 100%; }
+
+.PLANES {
+  grid-area: plan;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  margin: 0 10em; }
+
+.PLANES div {
+  background-color: lightslategray;
+  border: 0.3rem solid white;
+  padding: 1rem;
+  margin: 2rem 0%;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: space-between; }
+
+.FEATURES {
+  grid-area: features;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 10em; }
+
+.FEATURES div {
+  border: 0.3rem solid white;
+  padding: 1rem;
+  margin: 2rem 0%;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: space-between;
+  background-color: lightslategray; }
+
+@media screen and (max-width: 1280px) {
+  .PLANES {
+    flex-direction: column; }
+  .FEATURES {
+    flex-direction: column; }
+  .main__section--gridssub {
+    margin-bottom: 2em; } }
