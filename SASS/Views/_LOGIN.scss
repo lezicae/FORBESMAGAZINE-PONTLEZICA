@@ -1,51 +1,46 @@
 /* LOGIN CSS ------------------------------------------------------------------------------------------------------- */
-
-.main--login{
-    min-height: 100vh;
-}
-
-.main__sectionlog{
-    min-height: 100vh;
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-}
-
-.main__sectionlog__registerContainer{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
-    background-color: black;
-    width: 40%;
-}
-
-.main__sectionlog--register{
-    color: white;
-    width: 80%;
-}
-
-.main__sectionlog--register p{
-    padding: 2em;
-}
-
-.main__sectionlog__loginContainer{
-    width: 60%;
-    background-color: white;
-    display: flex;
-    justify-content: center;
-}
-
-.main__sectionlog--login{
-    background-color: white;
-    display: flex;
-    flex-direction: column;
-    width: 40%;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
+.main{
+    &--login{
+        min-height: 100vh;
+    }
+    &__sectionlog{
+        min-height: 100vh;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        &__registerContainer{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            background-color: black;
+            width: 40%;
+        }
+        &--register{
+            color: white;
+            width: 80%;
+            & p{
+                padding: 2em;
+            }
+        }
+        &__loginContainer{
+            width: 60%;
+            background-color: white;
+            display: flex;
+            justify-content: center;
+        }
+        &--login{
+            background-color: white;
+            display: flex;
+            flex-direction: column;
+            width: 40%;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+    }
 }
 
 @media screen and (max-width: 1280px){

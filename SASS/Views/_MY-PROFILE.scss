@@ -1,77 +1,73 @@
 /* MY PROFILE CSS ------------------------------------------------------------------------------------------------------- */
-
-.main--myprofile{
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    justify-content: center;
-    align-items: stretch;
-    background-color: white;
-    margin-top: 3em;
-}
-.main--myprofile h3{
-    padding: 1em;
-}
-
-.main__section--gridsprofile{
-    display: grid;
-    background-color: white;
-    grid-template-columns:  auto auto auto auto;
-    grid-auto-rows: minmax(100px, auto);
-}
-
-.MYPROFILEGRIDS--SUMMARY{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-    grid-column: 1 / 5;
-    grid-row: 1 / 2;
-    border-bottom: 1px solid black;
-}
-.MYPROFILEGRIDS--SUMMARY div{
-    display: flex;
-    flex-direction: column;
+.main{
+    &--myprofile{
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+        justify-content: center;
+        align-items: stretch;
+        background-color: white;
+        margin-top: 3em;
+        & h3{
+            padding: 1em;
+        }
+    }
+    &__section--gridsprofile{
+        display: grid;
+        background-color: white;
+        grid-template-columns:  auto auto auto auto;
+        grid-auto-rows: minmax(100px, auto);
+    }
 }
 
-.MYPROFILEGRIDS--BASICINFO{
-    grid-column: 1 / 4;
-    grid-row: 2 / 5 ;
-    background-color: #919191;
-}
-.MYPROFILEGRIDS--BASICINFO form{
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    padding: 0 0 0 1em;
-}
+.MYPROFILEGRIDS{
+    &--SUMMARY{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        grid-column: 1 / 5;
+        grid-row: 1 / 2;
+        border-bottom: 1px solid black;
+        & div{
+            display: flex;
+            flex-direction: column;
+        }
+    }
+    &--BASICINFO{
+        grid-column: 1 / 4;
+        grid-row: 2 / 5 ;
+        background-color: #919191;
+        & form{
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            padding: 0 0 0 1em;
+        }
+    }
+    &--NAV{
+        grid-column: 4 / 5;
+        grid-row: 2 / 5;
+        border-left: 1px solid black;
+        & div{
+            min-height: 100vh;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            background-color: rgba(0, 0, 0, 0.808);
+            & a{
+                width: 100%;
+                display: inline-block;
+                background-color: rgba(0, 0, 0, 0.387);
+                text-decoration: none;
+                color: white;
+                padding: 1em 0;
+                border-left: 0.5em solid black;
+            }
+        }
 
-input, textarea, label, button {
-    width : 12em;
-    padding: 1em 0;
-}
-
-.MYPROFILEGRIDS--NAV{
-    grid-column: 4 / 5;
-    grid-row: 2 / 5;
-    border-left: 1px solid black;
-}
-.MYPROFILEGRIDS--NAV div{
-    min-height: 100vh;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    background-color: rgba(0, 0, 0, 0.808);
-}
-.MYPROFILEGRIDS--NAV div a{
-    width: 100%;
-    display: inline-block;
-    background-color: rgba(0, 0, 0, 0.387);
-    text-decoration: none;
-    color: white;
-    padding: 1em 0;
-    border-left: 0.5em solid black;
+    }
 }
 
 @media screen and (max-width: 1280px){

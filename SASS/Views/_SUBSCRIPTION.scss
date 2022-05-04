@@ -1,23 +1,22 @@
 /* SUBSCRIPTION ------------------------------------------------------------------------------------------------------- */
-
-.main--subscription{
-    margin: 4em 0 0 0;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    justify-content: center;
-    align-items: center;
-    background-color: rgb(255, 255, 255);
+.main{
+    &--subscription{
+        margin: 4em 0 0 0;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+        justify-content: center;
+        align-items: center;
+        background-color: rgb(255, 255, 255);
+    }
+    &__section--gridssub{
+        display: grid;
+        background-color: black;
+        grid-template-areas: 'plan plan plan' 'features features features';
+        min-height: 100vh;
+        width: 100%;
+    }
 }
-
-.main__section--gridssub{
-    display: grid;
-    background-color: black;
-    grid-template-areas: 'plan plan plan' 'features features features';
-    min-height: 100vh;
-    width: 100%;
-}
-
 .PLANES{
     grid-area: plan;
     display: flex;
@@ -25,19 +24,17 @@
     align-items: center;
     justify-content: space-evenly;
     margin: 0 10em;
+    & div{
+        background-color: lightslategray;
+        border: 0.3rem solid rgb(255, 255, 255);
+        padding: 1rem;
+        margin: 2rem 0%;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        justify-content: space-between;
+    }
 }
-
-.PLANES div{
-    background-color: lightslategray;
-    border: 0.3rem solid rgb(255, 255, 255);
-    padding: 1rem;
-    margin: 2rem 0%;
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    justify-content: space-between;
-}
-
 .FEATURES{
     grid-area: features;
     display: flex;
@@ -45,18 +42,16 @@
     align-items: center;
     justify-content: space-between;
     margin: 0 10em;
-}
-
-.FEATURES div{
-    border: 0.3rem solid rgb(255, 255, 255);
-    padding: 1rem;
-    margin: 2rem 0%;
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    justify-content: space-between;
-    background-color:lightslategray;
-
+    & div{
+        border: 0.3rem solid rgb(255, 255, 255);
+        padding: 1rem;
+        margin: 2rem 0%;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        justify-content: space-between;
+        background-color:lightslategray;
+    }
 }
 
 @media screen and (max-width: 1280px){

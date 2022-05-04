@@ -20,6 +20,10 @@ img {
   min-height: 100vh;
   width: 100%; }
 
+input, textarea, label, button {
+  width: 12em;
+  padding: 1em 0; }
+
 .header {
   width: 100%;
   display: flex;
@@ -33,37 +37,32 @@ img {
   background-color: black;
   justify-content: space-between;
   align-items: center; }
-
-.nav--img {
-  width: 10rem;
-  height: auto; }
-
-.nav__elements--logo {
-  margin-left: 1em;
-  min-width: fit-content;
-  display: inline-block; }
-
-.nav__elements--panel {
-  width: 100%;
-  margin: 0%;
-  display: flex;
-  width: auto;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  list-style-type: none; }
-
-.nav__elements__panel {
-  min-width: max-content;
-  padding: 1em;
-  display: inline-block;
-  text-decoration: none;
-  color: white; }
-
-.nav__elements__panel:hover {
-  text-decoration: none;
-  color: white;
-  background-color: #4B4A54; }
+  .nav--img {
+    width: 10rem;
+    height: auto; }
+  .nav__elements--logo {
+    margin-left: 1em;
+    min-width: fit-content;
+    display: inline-block; }
+  .nav__elements--panel {
+    width: 100%;
+    margin: 0%;
+    display: flex;
+    width: auto;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    list-style-type: none; }
+  .nav__elements__panel {
+    min-width: max-content;
+    padding: 1em;
+    display: inline-block;
+    text-decoration: none;
+    color: white; }
+    .nav__elements__panel:hover {
+      text-decoration: none;
+      color: white;
+      background-color: #4B4A54; }
 
 .logo {
   padding: 0%;
@@ -88,18 +87,16 @@ img {
   padding: auto;
   text-align: center;
   background-color: black; }
-
-.footer__items {
-  width: auto;
-  text-decoration: none;
-  margin: 1em;
-  text-align: inherit;
-  color: white; }
-
-.footer__items--logo {
-  margin-left: 2em;
-  width: 7em;
-  height: auto; }
+  .footer__items {
+    width: auto;
+    text-decoration: none;
+    margin: 1em;
+    text-align: inherit;
+    color: white; }
+    .footer__items--logo {
+      margin-left: 2em;
+      width: 7em;
+      height: auto; }
 
 @media screen and (max-width: 1280px) {
   .footer__items {
@@ -118,14 +115,13 @@ img {
   align-items: center;
   justify-content: space-evenly;
   width: 100%; }
-
-.main__index__nav div {
-  background-color: lightslategray;
-  padding: 1em;
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  justify-content: space-between; }
+  .main__index__nav div {
+    background-color: lightslategray;
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: space-between; }
 
 /* ESTILOS NOTICIAS ---------------------------------------*/
 .main__article__primary {
@@ -134,18 +130,15 @@ img {
   align-items: center;
   height: 100%;
   width: 100%; }
-
-.main__article__primary--image {
-  width: 10em;
-  height: 10em; }
-
-.main__article__primary--content {
-  display: flex;
-  flex-direction: column; }
-
-.main__article__primary div {
-  margin: 5em 0;
-  background-color: lightslategray; }
+  .main__article__primary--image {
+    width: 10em;
+    height: 10em; }
+  .main__article__primary--content {
+    display: flex;
+    flex-direction: column; }
+  .main__article__primary div {
+    margin: 5em 0;
+    background-color: lightslategray; }
 
 .main__article__secondary {
   display: flex;
@@ -153,7 +146,7 @@ img {
   align-items: center;
   height: 33%; }
 
-.main__article__secondary div {
+.main__article div {
   background-color: lightslategray;
   height: 100%; }
 
@@ -175,37 +168,32 @@ img {
   display: flex;
   flex-direction: row;
   align-items: center; }
-
-.main__sectionlog__registerContainer {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  min-height: 100vh;
-  background-color: black;
-  width: 40%; }
-
-.main__sectionlog--register {
-  color: white;
-  width: 80%; }
-
-.main__sectionlog--register p {
-  padding: 2em; }
-
-.main__sectionlog__loginContainer {
-  width: 60%;
-  background-color: white;
-  display: flex;
-  justify-content: center; }
-
-.main__sectionlog--login {
-  background-color: white;
-  display: flex;
-  flex-direction: column;
-  width: 40%;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh; }
+  .main__sectionlog__registerContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: black;
+    width: 40%; }
+  .main__sectionlog--register {
+    color: white;
+    width: 80%; }
+    .main__sectionlog--register p {
+      padding: 2em; }
+  .main__sectionlog__loginContainer {
+    width: 60%;
+    background-color: white;
+    display: flex;
+    justify-content: center; }
+  .main__sectionlog--login {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; }
 
 @media screen and (max-width: 1280px) {
   .main__sectionlog {
@@ -246,9 +234,8 @@ img {
   align-items: stretch;
   background-color: white;
   margin-top: 3em; }
-
-.main--myprofile h3 {
-  padding: 1em; }
+  .main--myprofile h3 {
+    padding: 1em; }
 
 .main__section--gridsprofile {
   display: grid;
@@ -264,47 +251,39 @@ img {
   grid-column: 1 / 5;
   grid-row: 1 / 2;
   border-bottom: 1px solid black; }
-
-.MYPROFILEGRIDS--SUMMARY div {
-  display: flex;
-  flex-direction: column; }
+  .MYPROFILEGRIDS--SUMMARY div {
+    display: flex;
+    flex-direction: column; }
 
 .MYPROFILEGRIDS--BASICINFO {
   grid-column: 1 / 4;
   grid-row: 2 / 5;
   background-color: #919191; }
-
-.MYPROFILEGRIDS--BASICINFO form {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-  padding: 0 0 0 1em; }
-
-input, textarea, label, button {
-  width: 12em;
-  padding: 1em 0; }
+  .MYPROFILEGRIDS--BASICINFO form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    padding: 0 0 0 1em; }
 
 .MYPROFILEGRIDS--NAV {
   grid-column: 4 / 5;
   grid-row: 2 / 5;
   border-left: 1px solid black; }
-
-.MYPROFILEGRIDS--NAV div {
-  min-height: 100vh;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  background-color: rgba(0, 0, 0, 0.808); }
-
-.MYPROFILEGRIDS--NAV div a {
-  width: 100%;
-  display: inline-block;
-  background-color: rgba(0, 0, 0, 0.387);
-  text-decoration: none;
-  color: white;
-  padding: 1em 0;
-  border-left: 0.5em solid black; }
+  .MYPROFILEGRIDS--NAV div {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.808); }
+    .MYPROFILEGRIDS--NAV div a {
+      width: 100%;
+      display: inline-block;
+      background-color: rgba(0, 0, 0, 0.387);
+      text-decoration: none;
+      color: white;
+      padding: 1em 0;
+      border-left: 0.5em solid black; }
 
 @media screen and (max-width: 1280px) {
   .main__section--gridsprofile {
@@ -336,16 +315,15 @@ input, textarea, label, button {
   align-items: center;
   justify-content: space-evenly;
   margin: 0 10em; }
-
-.PLANES div {
-  background-color: lightslategray;
-  border: 0.3rem solid white;
-  padding: 1rem;
-  margin: 2rem 0%;
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  justify-content: space-between; }
+  .PLANES div {
+    background-color: lightslategray;
+    border: 0.3rem solid white;
+    padding: 1rem;
+    margin: 2rem 0%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: space-between; }
 
 .FEATURES {
   grid-area: features;
@@ -354,16 +332,15 @@ input, textarea, label, button {
   align-items: center;
   justify-content: space-between;
   margin: 0 10em; }
-
-.FEATURES div {
-  border: 0.3rem solid white;
-  padding: 1rem;
-  margin: 2rem 0%;
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  justify-content: space-between;
-  background-color: lightslategray; }
+  .FEATURES div {
+    border: 0.3rem solid white;
+    padding: 1rem;
+    margin: 2rem 0%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: space-between;
+    background-color: lightslategray; }
 
 @media screen and (max-width: 1280px) {
   .PLANES {
